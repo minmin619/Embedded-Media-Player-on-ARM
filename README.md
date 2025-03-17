@@ -7,7 +7,7 @@ A lightweight embedded multimedia player using **GStreamer + FFmpeg**, optimized
 **ARM Cross-compilation** for lightweight performance  
 **GStreamer + FFmpeg** for H.264 video playback  
 **Zero-copy Optimization** (DMA, V4L2, OpenGL)  
-**Web Interface** using WebKitGTK + WebSocket  
+
 
 ---
 
@@ -58,6 +58,7 @@ strip simple_player
 
 
 ## **Future Improvements**
+Add Web Interface** using WebKitGTK + WebSocket  
 Add RTSP streaming support  
 Implement adaptive bitrate playback  
 Improve low-latency rendering  
