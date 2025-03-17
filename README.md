@@ -55,7 +55,24 @@ gcc simple_player.c -o simple_player `pkg-config --cflags --libs gstreamer-1.0`
 ```bash
 strip simple_player
 ```
+## Challenges Encountered
 
+1. CPU & Memory Limitations
+
+Buildroot requires high CPU and memory resources, which may cause performance issues on low-end computers.
+To mitigate this, using make -j1 instead of parallel compilation (make -j4 or higher) can help reduce resource usage.
+Running Buildroot on a virtual machine (VirtualBox/VMware) may further slow down the process if insufficient RAM or CPU is allocated.
+
+2. Storage Limitations
+
+Buildroot requires at least 10GB of free space.
+If /var or /tmp is full, the build process might fail.
+Cleaning up unnecessary packages (sudo apt clean && sudo apt autoremove) can free up space.
+
+3. Alternative Solutions
+
+Pre-built Images: Instead of compiling Buildroot from scratch, downloading a pre-built image can save time.
+Dedicated Embedded Board: Running the project directly on an ARM board like Raspberry Pi or Jetson Nano can bypass resource limitations on a local machine.
 
 ## **Future Improvements**
 Add Web Interface** using WebKitGTK + WebSocket  
